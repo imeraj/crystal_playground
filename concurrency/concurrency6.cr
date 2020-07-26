@@ -3,7 +3,7 @@ module TimeChannel
     spawn do
       loop do
         sleep(100.milliseconds)
-        c.send(0)
+        c.send(nil)
       end
     end
   end
@@ -11,13 +11,13 @@ module TimeChannel
   def self.after(c)
     spawn do
       sleep(500.milliseconds)
-      c.send(0)
+      c.send(nil)
     end
   end
 end
 
-tick = Channel(Int32).new
-boom = Channel(Int32).new
+tick = Channel(Nil).new
+boom = Channel(Nil).new
 
 TimeChannel.tick(tick)
 TimeChannel.after(boom)
