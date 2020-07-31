@@ -2,7 +2,7 @@ SIZE = 10
 
 def fibonacci(n, c)
   x, y = 1, 1
-  (0...n).each {
+  n.times {
     c.send(x)
     x, y = y, x + y
   }

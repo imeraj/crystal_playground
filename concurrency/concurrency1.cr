@@ -1,5 +1,5 @@
 def say(s)
-  (1..5).each do
+  5.times do
     sleep 1.second
     puts s
   end

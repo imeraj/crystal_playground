@@ -18,7 +18,7 @@ c = Channel(Int32).new
 quit = Channel(Int32).new
 
 spawn do
-  (1..SIZE).each {
+  SIZE.times {
     puts c.receive
   }
   quit.send(0)

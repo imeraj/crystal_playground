@@ -21,7 +21,7 @@ class SafeCounter
 end
 
 c = SafeCounter.new
-(1..1000).each {
+1000.times {
   spawn do
     c.inc("someKey")
   end
