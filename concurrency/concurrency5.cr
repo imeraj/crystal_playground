@@ -1,7 +1,7 @@
 SIZE = 10
 
 def fibonacci(c, quit)
-  x, y = 1, 1
+  x, y = 0, 1
 
   loop do
     select

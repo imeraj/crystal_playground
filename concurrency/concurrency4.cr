@@ -1,7 +1,7 @@
 SIZE = 10
 
 def fibonacci(n, c)
-  x, y = 1, 1
+  x, y = 0, 1
   n.times {
     c.send(x)
     x, y = y, x + y
