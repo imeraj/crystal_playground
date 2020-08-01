@@ -15,13 +15,13 @@ def fibonacci(c, quit)
 end
 
 c = Channel(Int32).new
-quit = Channel(Int32).new
+quit = Channel(Nil).new
 
 spawn do
   SIZE.times {
     puts c.receive
   }
-  quit.send(0)
+  quit.send(nil)
 end
 
 fibonacci(c, quit)
