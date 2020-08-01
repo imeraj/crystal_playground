@@ -6,9 +6,7 @@ def say(s)
 end
 
 spawn do
-  loop do
-    say("world")
-  end
+  say("world")
 end
 
 say("hello")
